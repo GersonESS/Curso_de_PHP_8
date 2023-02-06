@@ -11,5 +11,14 @@ var_dump($texto);
 echo '<hr>';
 $today = date("m.d.y");
 echo $today;
-
+$texto = 'texto para resumir na nossa escola';
+echo '<hr>';
+echo $total = mb_strlen($texto);
+echo '<hr>';
+echo $tot = mb_substr($texto, 2, 15);
+echo '<hr>';
+echo $oco = mb_strrpos($texto, 'e', );
+echo '<hr>';
+echo $oco = mb_strrpos($texto, 't', );
+// aula 21 e 22 limpa tag
 ?>
