@@ -8,5 +8,8 @@ echo resumirTexto($texto, 50);
 echo '<hr>';
 $texto = 'gerson';
 var_dump($texto);
+echo '<hr>';
+$today = date("m.d.y");
+echo $today;
 
 ?>
