@@ -47,6 +47,11 @@ echo '<hr>';
 $data = date('d/m/y H:i:s');
 echo $data;
 
+echo '<hr>';
+
+contarTempo('2022-08-02 23:30:15');
+
+
 
 
 ?>

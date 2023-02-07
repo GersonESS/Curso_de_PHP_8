@@ -21,9 +21,39 @@ function resumirTexto(string $texto,int $limite,string $continue = '...'): strin
 }
 function contarTempo(string $data)
 {
-    echo $agora = date('y-m-d H:i:s');
+    $agora = strtotime(date('y-m-d H:i:s'));
+    $tempo = strtotime(date($data));
+    // echo $diferenca = $agora - $tempo;
+    $diferenca = $agora - $tempo;
+    $segundos = $diferenca;
+    $minutos  = round ($diferenca / 60);
+    $horas    = round($diferenca / 3600);
+    $dias     = round($diferenca / 86400);
+    $semanas  = round($diferenca / 604800);
     echo '<hr>';
-
-    var_dump($data);
+    var_dump($segundos);
+    echo '<hr>';
+    var_dump($minutos);
+    echo '<hr>';
+    var_dump($horas);
+    echo '<hr>';
+    var_dump($dias);
+    if($segundos <= 60)
+    {
+        return 'agora';
+    }
+    elseif($minutos <= 60) 
+    {
+        return $minutos == 1 ? 'Há 1 minuto' : 'Há '.$minutos.'minutos';
+    }
+    elseif($horas <= 24) 
+    {
+        return $horas == 1 ? 'Há 1 hora' : 'Há '.$horas.'horas';
+    }
+    elseif($dias <= 7) 
+    {
+        return $dias == 1 ? 'Há 1 dia' : 'Há '.$dias.'dias';
+    }
 }
+
 ?>

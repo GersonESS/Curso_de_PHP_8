@@ -2,9 +2,9 @@
 require_once 'sistemas/configuracao.php';
 include_once 'helpers.php';
 
-echo '<hr>';
 
-contarTempo('2022-08-02 23:30:15');
+
+contarTempo('2023-02-07 11:30:15');
 
 // $data = date('d/m/y H:i:s');
 // echo $data;
